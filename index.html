@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Bootstrap CSS -->
+	<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+	<link href="bootstrap.min.css" rel="stylesheet">
+	<link rel="icon" href="assets/icon.png" />
+	<link rel="stylesheet" href="style.css">
+
+	<title>web-format-file-levis</title>
+</head>
+
+<body>
+	<div class="container-fluid py-3">
+		<div class="mb-4">
+			<h5>web-format-file-levis</h5>
+		</div>
+		<!-- <p>
+			<a class="indicator" href="https://www.youtube.com/channel/UCRzS48bskynAxoI38BFypfQ?sub_confirmation=1"
+				target="_blank">Subscribe to Virej</a> • <a class="indicator"
+				href="https://github.com/virejdasani/Chrome-Extension-Boilerplate" target="_blank">Give the repo
+				a ⭐️</a>
+		</p> -->
+		<button type="button" class="btn btn-outline-primary btn-sm" id="loadFileXml" value="loadXml">Open file</button>
+		<input type="file" style="display:none;" id="file" name="file" />
+		<button type="button" class="btn btn-outline-success btn-sm" id="btnProcess">Process</button>
+		<button type="button" class="btn btn-outline-dark btn-sm" id="btnSave">Save</button>
+		<button type="button" class="btn btn-outline-primary btn-sm" id="btnClose">Close</button>
+
+		<p class=" mt-2 mb-0" id="pFileName"></p> 
+		<p class=" mt-2 mb-0" id="pRows"></p>
+
+		<div class=" mt-2">
+			<textarea class="form-control font-monospace" placeholder="contenido del archivo" id="floatingTextarea"
+				spellcheck="false">
+			</textarea>
+		</div>
+	</div>
+	<!-- 
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+		crossorigin="anonymous"></script> -->
+
+	<!-- files to local, security policy issue -->
+	<script src="bootstrap.bundle.min.js"></script>
+	<script src="index.js"></script>
+</body>
+
+</html>
