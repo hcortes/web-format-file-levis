@@ -7,4 +7,7 @@ formatea archivo de texto y agrega saltos de linea tipo windows
 - abrir boton "cargar descomprimida" 
 - habilitar extension 
 
+# Este proyecto era 2patos una extension de chrome
+Adaptado para web 
+
 
