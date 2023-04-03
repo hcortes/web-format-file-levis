@@ -42,7 +42,11 @@ function process() {
 		
 		let columns = '';
 		for (let i = 0; i < arrColumns.length; i++) {
-			const element = arrColumns[i].trim() ;
+			let element = arrColumns[i].trim() ;
+
+			// convert 00,00 to 00.00 
+			element = comaXpunto_reemplazar(element)
+		// 	comaXpunto_reemplazar(element)
 
 			let gutterSpace = 3;
 			if( (arrColumns.length - 1 ) === i ) {
@@ -62,6 +66,31 @@ function process() {
 	}
 	document.getElementById('floatingTextarea').value = ouput;
 }
+
+ 
+const isDigit = (character) => {
+	const DIGIT_EXPRESSION = /^\d$/;
+    return character && DIGIT_EXPRESSION.test(character);
+};
+
+
+function comaXpunto_reemplazar (value) {
+
+	let pos = value.indexOf(',');
+	if( pos > -1 ) {
+		const izq = value.charAt(pos-1);
+		const der = value.charAt(pos+1);
+
+		// console.log( 'CAMPO:', value, isDigit(izq), isDigit(der)  );
+
+		if( isDigit(izq) && isDigit(der) ){
+			//console.log( 'CAMPO:', value, pos  );  
+			value = value.replace(",", ".");
+		}
+	}
+	return value;
+}
+
 
 
 function width_save(cn, value, object_width ) {
